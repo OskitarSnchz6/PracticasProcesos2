@@ -27,11 +27,13 @@ public class Filosofo implements Runnable {
                 synchronized (leftFork) {
                 	doAction("Coge el palillo izquierdo");
                 	synchronized (rightFork) {
+                		doAction("Coge el palillo derecho");
                 		doAction("Deja el palillo derecho");
                     }
                 	doAction("Deja el palillo izquierdo. Se pone a pensar");
-                	//doAction("Pensando");
+                	
                 }
+                doAction("Pensando");
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
